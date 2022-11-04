@@ -84,5 +84,27 @@ namespace PlanetWeights
                 return weightConverted;
             }
         }
+
+        // display planet surface gravity
+        [DisplayName("Planet Surface Gravity:")]
+        public double planetSurfaceGravity
+        {
+            get
+            {
+                double surfaceGravity = 0.0;
+
+                if (planet.Equals(Planets.mercury)) { surfaceGravity = planetsSurfaceGravity[(int)Planets.mercury]; }
+                else if (planet.Equals(Planets.venus)) { surfaceGravity = planetsSurfaceGravity[(int)Planets.venus]; }
+                else if (planet.Equals(Planets.moon)) { surfaceGravity = planetsSurfaceGravity[(int)Planets.moon]; }
+                else if (planet.Equals(Planets.mars)) { surfaceGravity = planetsSurfaceGravity[(int)Planets.mars]; }
+                else if (planet.Equals(Planets.jupiter)) { surfaceGravity = planetsSurfaceGravity[(int)Planets.jupiter]; }
+                else if (planet.Equals(Planets.saturn)) { surfaceGravity = planetsSurfaceGravity[(int)Planets.saturn]; }
+                else if (planet.Equals(Planets.uranus)) { surfaceGravity = planetsSurfaceGravity[(int)Planets.uranus]; }
+                else if (planet.Equals(Planets.neptune)) { surfaceGravity = planetsSurfaceGravity[(int)Planets.neptune]; }
+                else if (planet.Equals(Planets.pluto)) { surfaceGravity = planetsSurfaceGravity[(int)Planets.pluto]; }
+
+                return surfaceGravity;
+            }
+        }
     }
 }
